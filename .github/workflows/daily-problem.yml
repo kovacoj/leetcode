@@ -3,7 +3,6 @@ name: Daily LeetCode Issue
 on:
   schedule:
     - cron: "15 6 * * *"
-      timezone: "Europe/Prague"
   workflow_dispatch:
 
 permissions:

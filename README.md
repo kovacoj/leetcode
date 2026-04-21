@@ -2,7 +2,7 @@
 
 [![Python CI](https://img.shields.io/github/actions/workflow/status/kovacoj1/leetcode/python-ci.yml?label=ruff&style=flat-square)](https://github.com/kovacoj1/leetcode/actions/workflows/python-ci.yml)
 [![Daily Problem](https://img.shields.io/github/actions/workflow/status/kovacoj1/leetcode/daily-problem.yml?label=daily%20automation&style=flat-square)](https://github.com/kovacoj1/leetcode/actions/workflows/daily-problem.yml)
-[![Issues](https://img.shields.io/github/issues/kovacoj1/leetcode?style=flat-square)](https://github.com/kovacoj1/leetcode/issues)
+[![Python](https://img.shields.io/badge/python-3.12-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/github/license/kovacoj1/leetcode?style=flat-square)](LICENSE)
 
 A structured data structures and algorithms practice repository with automated daily problem tracking.
@@ -48,7 +48,7 @@ Based on the study plan in `TODO.md`:
 
 ## Daily Problem Automation
 
-A scheduled GitHub Actions workflow runs daily at 06:15 CET and:
+A scheduled GitHub Actions workflow runs daily at 06:15 UTC and:
 
 1. Queries the LeetCode GraphQL API for the current daily problem
 2. Opens a GitHub Issue if one does not already exist for that day
@@ -79,7 +79,7 @@ This repo uses [Conventional Commits](https://www.conventionalcommits.org/):
 
 There is no automated test suite. Verification is intentionally lightweight:
 
-- **Python CI**: Ruff checks lint (`E`, `F`, `W`, `UP`, `I`) and format on every push/PR that touches `problems/`
+- **Python CI**: Ruff checks lint (`E`, `F`, `W`, `UP`, `I`) and format on every push/PR that touches `problems/` or Python CI config
 - validate logic against the problem's examples and edge cases
 - run a local harness if a problem file includes one
 - for GitHub Action changes: `npm ci` and `node --check .github/actions/daily-problem/index.js`

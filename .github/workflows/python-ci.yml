@@ -3,9 +3,18 @@ name: Python CI
 on:
   push:
     branches: [main]
-    paths: ["problems/**/*.py"]
+    paths:
+      - "problems/**/*.py"
+      - ".github/workflows/python-ci.yml"
+      - "ruff.toml"
+      - ".editorconfig"
   pull_request:
-    paths: ["problems/**/*.py"]
+    paths:
+      - "problems/**/*.py"
+      - ".github/workflows/python-ci.yml"
+      - "ruff.toml"
+      - ".editorconfig"
+  workflow_dispatch:
 
 permissions:
   contents: read
